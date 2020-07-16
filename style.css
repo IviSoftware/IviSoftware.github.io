@@ -23,34 +23,32 @@ body{
 
 /*Barra de naveggacion*/
 
-.navbar{
+.menu-header{
     width: 100%;
     height: 60px;
     background-color: var(--color-barra);
     position: relative;
+    display: flex;
    
 }
 
 .logo{
     width: 200px;
-
     display: inline-block;
 }
 
 .menu{
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    align-items: flex-end;
     position: absolute;
     right: 0;
-    
 }
-
 
 .menu-item{
     list-style: none;
-    margin-right: 10px;
+    margin-right: 15px;
 }
+
 
 .menu-link ,
 .menu-link-footer{
@@ -58,6 +56,15 @@ body{
     text-decoration: none;
 }
 
+.icon{
+    margin-right: 5px;
+}
+
+
+.menu-bar-icon{
+    display: none;
+
+}
 /*Termina Barra de naveggacion*/
 
 /*Portada*/
@@ -117,9 +124,6 @@ body{
 }
 
 
-.juego:hover{
-    border: var(--color-barra) solid 1px; 
-}
 
 
 .title{
@@ -131,7 +135,7 @@ body{
 
 .contactanos{
     width: 100%;
-    height: 200px;
+    height: 250px;
     background-color: rgb(5, 5, 5);
 }
 
@@ -144,3 +148,59 @@ body{
     margin-bottom: 15px;
 }
 /*Termina footer*/
+
+/*Inicia Responsive*/
+
+@media screen and (max-width:500px){
+    .menu-header{
+        width: 80%;
+        height: 30%;
+        left: -100%;
+      /*  position: fixed;*/
+        z-index: 2;
+    }
+
+   
+
+    .menu{
+        display: block;
+        position: relative;
+    }
+
+    .menu-item{
+        margin-bottom: 2em;
+    }
+
+    .menu-bar-icon{
+        display: block;
+        width: 100%;
+        background: #cccccc;
+        position: relative;
+    }
+
+    .bt-menu{
+        display: block;
+        padding: 20px;
+        background-color: var(--color-barra);
+        color: white;
+        text-decoration: none;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size : 2rem;
+
+    }
+
+    .icon-menu-my{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        margin-top: 10px;
+        margin-right: 2rem;
+    }
+    
+    .logo{
+        display: none;
+        
+    }
+}
+/*Termina Responsive*/
